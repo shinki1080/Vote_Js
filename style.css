@@ -1,0 +1,59 @@
+#true_area,#false_area {
+    font-size: 20px;
+    font-weight: bold;  /*太字にするぞ*/
+    display:  inline-block;
+    width: calc(50% - 5px);     /*widthは追加エレメントに応じて広がり、画面全体の50％-5で幅取りをする*/
+    min-height:  100px;
+    border: solid 1px;
+    vertical-align:  top;   /*display: inline-block,inline-box;で使える   表セルボックス*/  /*垂直方向の配置 flexのcolumnみたいなもん*/  /*top,middle,bottomがプロパティに入る*/
+    padding: 0 10px 10px 10px;
+    
+    box-sizing:  border-box;  
+    /*要素に割り当てられたwidth,heightの領域のみに適用。要素全体の幅と高さの計算方法を設定する。*/ /*border-boxはコンテンツ、パディング、境界線の領域を含めて行う*/
+    /* width=境界線+パディング+コンテンツの幅 / height=境界線+パディング+コンテンツの高さ*/
+}
+.btn {
+    background-color:  #000;
+    display:  inline-block;
+    color:  #fff;
+    border-radius: 5px;  /*ちょっと角を取ったりにも使える*/
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn_area {
+    text-align:  center;
+    padding-top:  30px;
+}
+.btn:nth-child(1) {
+    background-color: #FF9800;
+}
+
+.btn:nth-child(2) {
+    background-color: #00BCD4;
+}
+
+#true_area .head {
+    color: #FF9800;
+    text-align:  center;
+}
+#false_area .head {
+    color: #00BCD4;
+    text-align:  center;
+}
+
+#true_area .icon {
+    background-color: #FF5722;
+}
+
+#false_area .icon {
+    background-color: #2196F3;
+}
+
+/*追加されるエレメントに対するスタイル*/
+.icon {     
+    height:  20px;
+    width:  20px;
+    border-radius:  50%;    /*〇型にするには50％*/
+    display:  inline-block;
+    margin: 2px;
+}
